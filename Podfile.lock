@@ -1,0 +1,20 @@
+PODS:
+  - Cache (6.0.0)
+  - Imaginary (5.0.0):
+    - Cache (~> 6.0.0)
+
+DEPENDENCIES:
+  - Imaginary
+
+SPEC REPOS:
+  trunk:
+    - Cache
+    - Imaginary
+
+SPEC CHECKSUMS:
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+
+PODFILE CHECKSUM: 5ac000cfa0cba8a6ae1855907cc188539b994692
+
+COCOAPODS: 1.11.3

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Imaginary
 
 protocol ListingViewControllerProtocol: AnyObject {
     var presenter: ListingPresenterProtocol? { get set }
@@ -52,10 +53,6 @@ class ListingViewController: UIViewController, ListingViewControllerProtocol {
             self?.present(alert, animated: true)
         }
     }
-    
-    
-    
-    
 }
 
 extension ListingViewController: UICollectionViewDelegate {
@@ -70,10 +67,19 @@ extension ListingViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-        let label = UILabel()
-        label.text = pokemonDetailList[indexPath.row].name
+        let pokemon = pokemonDetailList[indexPath.row]
         
-        cell.backgroundView = label
+        let label = UILabel()
+        label.text = pokemon.name
+        
+        let imageView = UIImageView()
+        let imageUrl = URL(string: pokemon.sprites.other.officialArtwork.frontDefault)!
+        imageView.setImage(url: imageUrl)
+        
+        let stackView = UIStackView(arrangedSubviews: [label, imageView])
+        stackView.axis = .vertical
+        
+        cell.backgroundView = stackView
         
         return cell
     }
