@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10599C1928882F7D0006DDCE /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10599C1828882F7D0006DDCE /* DetailView.storyboard */; };
+		10599C1C288835200006DDCE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10599C1A288835200006DDCE /* DetailCell.swift */; };
+		10599C1D288835200006DDCE /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10599C1B288835200006DDCE /* DetailCell.xib */; };
 		10F0434828859B72005282B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F0434728859B72005282B3 /* AppDelegate.swift */; };
 		10F0434A28859B72005282B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F0434928859B72005282B3 /* SceneDelegate.swift */; };
 		10F0435128859B73005282B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F0435028859B73005282B3 /* Assets.xcassets */; };
@@ -17,10 +20,17 @@
 		10F043642885A0C1005282B3 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F043632885A0C1005282B3 /* ListingViewController.swift */; };
 		10F043662885A0FA005282B3 /* ListingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F043652885A0FA005282B3 /* ListingView.storyboard */; };
 		10F043692885EB13005282B3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F043682885EB13005282B3 /* Models.swift */; };
+		10F0436B2886B786005282B3 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F0436A2886B786005282B3 /* DetailRouter.swift */; };
+		10F0436F2886B7CE005282B3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F0436E2886B7CE005282B3 /* DetailViewController.swift */; };
+		10F04379288738FD005282B3 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F04377288738FD005282B3 /* ListingCell.swift */; };
+		10F0437A288738FD005282B3 /* ListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10F04378288738FD005282B3 /* ListingCell.xib */; };
 		3C205541E6F057B4C52CBBCE /* Pods_PokeList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DAD7EF5679B10F2848E1EA /* Pods_PokeList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10599C1828882F7D0006DDCE /* DetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		10599C1A288835200006DDCE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		10599C1B288835200006DDCE /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		10F0434428859B72005282B3 /* PokeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F0434728859B72005282B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F0434928859B72005282B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +43,10 @@
 		10F043632885A0C1005282B3 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		10F043652885A0FA005282B3 /* ListingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListingView.storyboard; sourceTree = "<group>"; };
 		10F043682885EB13005282B3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		10F0436A2886B786005282B3 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		10F0436E2886B7CE005282B3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		10F04377288738FD005282B3 /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
+		10F04378288738FD005282B3 /* ListingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingCell.xib; sourceTree = "<group>"; };
 		6A3F0847D680B26B3675C21C /* Pods-PokeList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.debug.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.debug.xcconfig"; sourceTree = "<group>"; };
 		89DAD7EF5679B10F2848E1EA /* Pods_PokeList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B069792D6C57854983BC4C /* Pods-PokeList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeList.release.xcconfig"; path = "Target Support Files/Pods-PokeList/Pods-PokeList.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +85,7 @@
 		10F0434628859B72005282B3 /* PokeList */ = {
 			isa = PBXGroup;
 			children = (
+				10F04372288731F2005282B3 /* Models */,
 				10F0435C28859BFB005282B3 /* Detail */,
 				10F0435B28859BD0005282B3 /* Listing */,
 				10F0434728859B72005282B3 /* AppDelegate.swift */,
@@ -85,12 +100,13 @@
 		10F0435B28859BD0005282B3 /* Listing */ = {
 			isa = PBXGroup;
 			children = (
-				10F043682885EB13005282B3 /* Models.swift */,
 				10F0435D28859EFB005282B3 /* ListingRouter.swift */,
 				10F0435F2885A053005282B3 /* ListingInteractor.swift */,
 				10F043612885A09B005282B3 /* ListingPresenter.swift */,
 				10F043632885A0C1005282B3 /* ListingViewController.swift */,
 				10F043652885A0FA005282B3 /* ListingView.storyboard */,
+				10F04377288738FD005282B3 /* ListingCell.swift */,
+				10F04378288738FD005282B3 /* ListingCell.xib */,
 			);
 			path = Listing;
 			sourceTree = "<group>";
@@ -98,8 +114,21 @@
 		10F0435C28859BFB005282B3 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				10F0436A2886B786005282B3 /* DetailRouter.swift */,
+				10F0436E2886B7CE005282B3 /* DetailViewController.swift */,
+				10599C1828882F7D0006DDCE /* DetailView.storyboard */,
+				10599C1A288835200006DDCE /* DetailCell.swift */,
+				10599C1B288835200006DDCE /* DetailCell.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		10F04372288731F2005282B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10F043682885EB13005282B3 /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1F2F5BF6C6E546990E8D36D1 /* Pods */ = {
@@ -108,7 +137,6 @@
 				6A3F0847D680B26B3675C21C /* Pods-PokeList.debug.xcconfig */,
 				C7B069792D6C57854983BC4C /* Pods-PokeList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,7 +210,10 @@
 			files = (
 				10F0435428859B73005282B3 /* LaunchScreen.storyboard in Resources */,
 				10F0435128859B73005282B3 /* Assets.xcassets in Resources */,
+				10599C1D288835200006DDCE /* DetailCell.xib in Resources */,
 				10F043662885A0FA005282B3 /* ListingView.storyboard in Resources */,
+				10599C1928882F7D0006DDCE /* DetailView.storyboard in Resources */,
+				10F0437A288738FD005282B3 /* ListingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,10 +267,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F043602885A053005282B3 /* ListingInteractor.swift in Sources */,
+				10599C1C288835200006DDCE /* DetailCell.swift in Sources */,
+				10F0436B2886B786005282B3 /* DetailRouter.swift in Sources */,
 				10F0435E28859EFB005282B3 /* ListingRouter.swift in Sources */,
 				10F0434828859B72005282B3 /* AppDelegate.swift in Sources */,
 				10F043642885A0C1005282B3 /* ListingViewController.swift in Sources */,
 				10F043692885EB13005282B3 /* Models.swift in Sources */,
+				10F04379288738FD005282B3 /* ListingCell.swift in Sources */,
+				10F0436F2886B7CE005282B3 /* DetailViewController.swift in Sources */,
 				10F0434A28859B72005282B3 /* SceneDelegate.swift in Sources */,
 				10F043622885A09B005282B3 /* ListingPresenter.swift in Sources */,
 			);

@@ -10,18 +10,17 @@ import Foundation
 protocol ListingInteractorProtocol: AnyObject {
     var presenter: ListingPresenterProtocol? { get set }
     
-    func fetchPokemonUrlList()
+    func fetchPokemonUrlList(for page: String?)
     func fetchPokemonDetail(with url: String) async throws -> PokemonDetail
 }
-
 
 class ListingInteractor: ListingInteractorProtocol {
     weak var presenter: ListingPresenterProtocol?
     
     let baseUrl = "https://pokeapi.co/api/v2/pokemon/"
     
-    func fetchPokemonUrlList() {
-        guard let url = URL(string: baseUrl) else {
+    func fetchPokemonUrlList(for page: String?) {
+        guard let url = URL(string: page ?? baseUrl) else {
             fatalError("Coudn't get API URL.")
         }
         
@@ -51,7 +50,7 @@ class ListingInteractor: ListingInteractorProtocol {
         let (data, response) = try await URLSession.shared.data(from: detailUrl)
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            throw ListError.networkError(error: "Coldn't download pokemon detail data.")
+            throw ListError.networkError(error: "Couldn't download pokemon detail data.")
         }
         
         do {

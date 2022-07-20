@@ -4,6 +4,6 @@ target 'PokeList' do
   use_frameworks!
 
   # Pods for PokeList
-  pod 'Imaginary'
+  pod 'SDWebImage', '~> 5.0'
 
 end

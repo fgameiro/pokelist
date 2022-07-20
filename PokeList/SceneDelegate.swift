@@ -18,9 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let listingVC = ListingRouter.present()
+        let listingVC = ListingRouter().present()
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = listingVC
+        let navController = UINavigationController()
+        navController.pushViewController(listingVC, animated: false)
+        navController.navigationBar.prefersLargeTitles = true
+        window.rootViewController = navController
         self.window = window
         window.makeKeyAndVisible()
     }

@@ -1,20 +1,18 @@
 PODS:
-  - Cache (6.0.0)
-  - Imaginary (5.0.0):
-    - Cache (~> 6.0.0)
+  - SDWebImage (5.13.1):
+    - SDWebImage/Core (= 5.13.1)
+  - SDWebImage/Core (5.13.1)
 
 DEPENDENCIES:
-  - Imaginary
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   trunk:
-    - Cache
-    - Imaginary
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
-  Imaginary: cf5e3a7dd6ab1dcbd47ba8ce5edf2307c4e99eb3
+  SDWebImage: fb26a455eeda4c7a55e4dcb6172dbb258af7a4ca
 
-PODFILE CHECKSUM: 5ac000cfa0cba8a6ae1855907cc188539b994692
+PODFILE CHECKSUM: 3d21c7b1974a21ce5937af0231bbbd0c0c3b6a49
 
 COCOAPODS: 1.11.3

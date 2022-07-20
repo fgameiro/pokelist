@@ -11,26 +11,36 @@ import UIKit
 typealias ListingPresentation = ListingViewControllerProtocol & UIViewController
 
 protocol ListingRouterProtocol {
-    static func present() -> ListingPresentation
+    func present() -> ListingPresentation
+    
+    func goToPokemonDetail(on navController: UINavigationController, with pokemonDetail: PokemonDetail)
 }
 
 class ListingRouter: ListingRouterProtocol {
-    static func present() -> ListingPresentation {
-        let storyboard = UIStoryboard.init(name: "ListingView", bundle: Bundle.main)
-        guard let listingVC = storyboard.instantiateInitialViewController() as? ListingViewController else {
-            fatalError("Couldn't load ListingVC.")
-        }
+    var storyboard: UIStoryboard  {
+        return UIStoryboard.init(name: "ListingView", bundle: Bundle.main)
+    }
+    
+    func present() -> ListingPresentation {
         
+        guard let listingVC = storyboard.instantiateInitialViewController() as? ListingPresentation else {
+            fatalError("Couldn't load listing view.")
+        }
         let presenter = ListingPresenter()
         let interactor = ListingInteractor()
         
         presenter.interactor = interactor
         presenter.viewController = listingVC
+        presenter.router = self
         listingVC.presenter = presenter
         interactor.presenter = presenter
         
         return listingVC
     }
     
-    
+    func goToPokemonDetail(on navController: UINavigationController, with pokemonDetail: PokemonDetail) {
+        let detailVC = DetailRouter.present(with: pokemonDetail)
+        
+        navController.pushViewController(detailVC, animated: true)
+    }
 }
